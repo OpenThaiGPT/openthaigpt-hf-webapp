@@ -1,0 +1,14 @@
+{
+    "python.defaultInterpreterPath": "venv/bin/python",
+    "python.analysis.extraPaths": [
+        "."
+    ],
+    "python.testing.pytestArgs": [
+        "otgpt_hft"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}"
+    }
+}

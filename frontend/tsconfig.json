@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "./*"
+            ]
+        },
+        "lib": [
+            "ES2022",
+            "DOM"
+        ],
+        "esModuleInterop": true,
+    }
+}

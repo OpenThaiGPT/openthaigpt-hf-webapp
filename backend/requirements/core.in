@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+starlette
+itsdangerous
+aiosqlite
+python-multipart
+argon2-cffi
+typer
+pytest
+aiofiles
+typer-cli==0.0.13

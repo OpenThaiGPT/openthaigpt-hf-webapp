@@ -1,0 +1,75 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Uvicorn",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "otgpt_hft.server:app",
+                "--log-config",
+                "logging-config.json",
+                "--lifespan",
+                "on",
+            ],
+            "env": {
+                "PAGE_DIR": "${workspaceFolder:Frontend}/dist",
+                "SESSION_KEY": "openthaigpt-super-secret-key"
+            },
+            "justMyCode": false
+        },
+        {
+            "name": "Python: Uvicorn reload",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "otgpt_hft.server:app",
+                "--log-config",
+                "logging-config.json",
+                "--lifespan",
+                "on",
+                "--reload-exclude",
+                ".git",
+                "--reload"
+            ],
+            "env": {
+                "PAGE_DIR": "${workspaceFolder:Frontend}/dist",
+                "SESSION_KEY": "openthaigpt-super-secret-key"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Store Inspect",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "cli_tools",
+            "args": [
+                "store",
+                "inspect",
+                "Thaweewat-oasst1_th",
+                "dev",
+                "f2df8535-93ed-4a85-b703-07771056d1ef",
+            ],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}"
+            },
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Debug Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "purpose": [
+                "debug-test"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}
